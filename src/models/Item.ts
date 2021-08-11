@@ -24,11 +24,15 @@ class Item {
   @Column()
   note_id: string;
 
+  @Column()
+  parent_id?: string;
+
   @ManyToOne(() => Note)
   @JoinColumn({ name: "note_id" })
   note: Note;
 
   @ManyToOne(() => Item, (item) => item.children)
+  @JoinColumn({ name: "parent_id" })
   parent: Item;
 
   @OneToMany(() => Item, (item) => item.parent)

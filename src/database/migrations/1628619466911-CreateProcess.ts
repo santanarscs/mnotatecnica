@@ -25,6 +25,7 @@ export class CreateProcess1628619466911 implements MigrationInterface {
           {
             name: "image",
             type: "varchar",
+            isNullable: true,
           },
           {
             name: "note_id",

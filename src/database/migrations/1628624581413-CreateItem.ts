@@ -29,10 +29,12 @@ export class CreateItem1628624581413 implements MigrationInterface {
           {
             name: "parent_id",
             type: "uuid",
+            isNullable: true,
           },
           {
             name: "child_id",
             type: "uuid",
+            isNullable: true,
           },
           {
             name: "note_id",
